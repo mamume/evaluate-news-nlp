@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: medium;
+}
+
+main {
+  flex: 2;
+}
+
+section {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.result {
+  font-size: larger;
+  font-family: sans-serif;
+}
