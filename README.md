@@ -10,7 +10,7 @@
     * install all project dependencies with `npm install`
     * change .env file with your API key.
     
- ### Launch The Project
+ ### Launch
 
     * Start project server with `npm run start`
     * Build project in development mode with `npm run build-dev`
