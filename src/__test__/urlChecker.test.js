@@ -1,4 +1,4 @@
-const urlChecker = require('../client/js/urlChecker')
+import urlChecker from '../client/js/urlChecker'
 
 test('https://jestjs.io/ should be true', () => {
     expect(urlChecker('https://jestjs.io/')).toBe(true)

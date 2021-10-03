@@ -14,7 +14,13 @@ module.exports = {
             {
                 test: '/\.js$/',
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/plugin-transform-runtime']
+                    }
+                }
             },
             {
                 test: /\.scss$/,
@@ -36,10 +42,10 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         }),
-        new WorkboxPlugin.GenerateSW()
+        new WorkboxPlugin.GenerateSW(),
     ],
     output: {
-        filename: "main.[hash].js",
+        filename: "main.js",
         path: path.resolve(__dirname, 'dist')
     },
 }

@@ -5,7 +5,6 @@ var bodyParser = require('body-parser')
 var cors = require('cors')
 const axios = require('axios').default;
 
-
 const PORT = 8081
 
 const dotenv = require('dotenv');
@@ -32,11 +31,10 @@ app.get('/', function (req, res) {
 app.get('/url', async (req, res) => {
     try {
         const input = req.query.input
-
         axios.get(BASE_URL + input)
             .then(response => {
                 result = response.data
-
+                console.log(result)
                 res.send({
                     text: result.sentence_list[0].text,
                     score_tag: result.sentence_list[0].score_tag,
@@ -46,6 +44,7 @@ app.get('/url', async (req, res) => {
                     irony: result.irony
                 })
             })
+            .catch(error => console.log(error))
     } catch (error) {
         console.log(error)
     }

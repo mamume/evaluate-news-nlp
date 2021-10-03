@@ -1,4 +1,4 @@
-const handleSubmit = require('../client/js/handleSubmit')
+import handleSubmit from '../client/js/handleSubmit'
 
 
 test('Testing form submitting', () => {

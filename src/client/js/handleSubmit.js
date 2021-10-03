@@ -1,7 +1,7 @@
-import { showResult } from "./showResult";
-import { urlChecker } from './urlChecker'
+import showResult from "./showResult";
+import urlChecker from './urlChecker'
 
-function handleSubmit(e) {
+export default function handleSubmit(e) {
     e.preventDefault()
 
     const input = document.querySelector('#url-input')
@@ -13,5 +13,3 @@ function handleSubmit(e) {
             .then(repsonse => repsonse.json())
             .then(data => showResult(data))
 }
-
-module.exports = handleSubmit;

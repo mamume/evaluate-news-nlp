@@ -31,7 +31,7 @@ module.exports = {
             filename: "./index.html",
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css'
+            filename: '[name].css'
         }),
         new CleanWebpackPlugin({
             // Simulate the removal of files

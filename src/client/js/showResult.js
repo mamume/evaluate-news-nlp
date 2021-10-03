@@ -1,4 +1,4 @@
-function showResult(data) {
+export default function showResult(data) {
     const agreement = document.querySelector('#agreement')
     const confidence = document.querySelector('#confidence')
     const irony = document.querySelector('#irony')
@@ -13,5 +13,3 @@ function showResult(data) {
     subjectivity.innerText = 'Subjectivity: ' + data.subjectivity
     text.innerText = 'Text: ' + data.text
 }
-
-module.exports = showResult;

@@ -1,10 +1,8 @@
 let validUrl = require('valid-url');
 
-function urlChecker(input) {
+export default function urlChecker(input) {
     if (validUrl.isUri(input))
         return true
     else
         return false
 }
-
-module.exports = urlChecker;

@@ -1,5 +1,4 @@
-const showResult = require('../client/js/showResult')
-
+import showResult from '../client/js/showResult'
 
 test('Testing showing result', () => {
     expect(showResult).toBeDefined();
